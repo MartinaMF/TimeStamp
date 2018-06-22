@@ -24,7 +24,7 @@ else{
   var natural = new Date(req.params.time);
   if(!isNaN(natural)){
     var unix = natural / 1000;
-    var data ={unix : unix, natural: natural};
+    var data ={unix : unix, natural: req.params.time};
     res.json(data);
   }else{
     res.json({unix:null, natural:null});
